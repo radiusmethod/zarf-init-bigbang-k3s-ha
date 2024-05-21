@@ -11,5 +11,6 @@ runs:
   using: composite
   steps:
     - run: |
+        echo $INPUT_FLAVOR
         cd zarf/${INPUT_FLAVOR} && zarf dev lint
       shell: bash
