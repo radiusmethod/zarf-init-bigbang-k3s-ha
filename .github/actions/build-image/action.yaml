@@ -5,12 +5,11 @@ inputs:
   flavor:
     description: "The flavor of the zarf package"
     required: true
-    default: full
 
 runs:
   using: composite
   steps:
     - run: |
         set +o history && echo ${REGISTRY1_PASSWORD} | zarf tools registry login registry1.dso.mil --username ${REGISTRY1_USERNAME} --password-stdin || set -o history
-        make build-${INPUT_FLAVOR}
+        make build-${{ inputs.flavor }}
       shell: bash
