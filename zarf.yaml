@@ -6,8 +6,7 @@ metadata:
 components:
   - name: k3s
     import:
-      # renovate: depName=defenseunicorns/zarf
-      url: oci://ghcr.io/defenseunicorns/packages/init:v0.33.2
+      path: k3s
 
   - name: zarf-injector
     required: true
