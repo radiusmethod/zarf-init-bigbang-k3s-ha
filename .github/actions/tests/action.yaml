@@ -1,5 +1,5 @@
 name: install-tools
-description: "Run Tests for ${{ inputs.flavor }}"
+description: "Run Tests"
 
 inputs:
   flavor:
@@ -11,5 +11,5 @@ runs:
   using: composite
   steps:
     - run: |
-        cd zarf/${{ inputs.flavor }} && zarf dev lint
+        cd zarf/${{ github.event.inputs.flavor }} && zarf dev lint
       shell: bash

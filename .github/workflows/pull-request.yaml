@@ -17,7 +17,7 @@ jobs:
 
     strategy:
       matrix:
-        flavor: [full, minimal]
+        flavor: [ full, minimal ]
 
     permissions:
       contents: read
