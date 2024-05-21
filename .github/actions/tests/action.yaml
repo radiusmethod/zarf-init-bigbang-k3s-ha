@@ -1,9 +1,9 @@
 name: install-tools
-description: "Run Tests"
+description: "Run Tests for ${{ matrix.flavor }}"
 
 runs:
   using: composite
   steps:
     - run: |
-        zarf dev lint
+        cd zarf/${{ matrix.flavor }} && zarf dev lint
       shell: bash
