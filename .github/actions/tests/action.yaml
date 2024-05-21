@@ -11,5 +11,5 @@ runs:
   using: composite
   steps:
     - run: |
-        cd zarf/${{ github.event.inputs.flavor }} && zarf dev lint
+        cd zarf/${{ inputs.flavor }} && zarf dev lint
       shell: bash
