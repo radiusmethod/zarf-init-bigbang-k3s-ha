@@ -1,0 +1,10 @@
+kind: ZarfInitConfig
+metadata:
+  name: init
+  description: Minimal package with k3s only
+
+components:
+  - name: k3s
+    required: true
+    import:
+      path: ../../k3s

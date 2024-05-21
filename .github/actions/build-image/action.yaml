@@ -1,10 +1,10 @@
 name: build-image
-description: "Build image"
+description: "Build ${{ matrix.flavor }} image"
 
 runs:
   using: composite
   steps:
     - run: |
         set +o history && echo ${REGISTRY1_PASSWORD} | zarf tools registry login registry1.dso.mil --username ${REGISTRY1_USERNAME} --password-stdin || set -o history
-        make build
+        make build-${{ matrix.flavor }}
       shell: bash

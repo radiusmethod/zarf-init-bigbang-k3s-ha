@@ -6,7 +6,7 @@ metadata:
 components:
   - name: k3s
     import:
-      path: k3s
+      path: ../../k3s
 
   - name: zarf-injector
     required: true
