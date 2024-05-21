@@ -40,6 +40,8 @@ jobs:
         env:
           REGISTRY1_USERNAME: ${{ secrets.REGISTRY1_USERNAME }}
           REGISTRY1_PASSWORD: ${{ secrets.REGISTRY1_PASSWORD }}
+        with:
+          flavor: ${{ matrix.flavor }}
 
       - name: "Sign and Publish the ${{ matrix.flavor }} image"
         run: |
