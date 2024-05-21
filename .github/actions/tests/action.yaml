@@ -1,9 +1,14 @@
 name: install-tools
 description: "Run Tests"
 
+inputs:
+  flavor:
+    description: "The flavor of the zarf package"
+    required: true
+
 runs:
   using: composite
   steps:
     - run: |
-        zarf dev lint
+        cd zarf/${{ inputs.flavor }} && zarf dev lint
       shell: bash

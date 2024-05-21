@@ -1,12 +1,12 @@
 kind: ZarfInitConfig
 metadata:
-  name: init
+  name: full
   description: Used to establish a new Zarf cluster
 
 components:
   - name: k3s
     import:
-      path: k3s
+      path: ../../k3s
 
   - name: zarf-injector
     required: true

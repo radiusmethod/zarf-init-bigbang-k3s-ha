@@ -1,10 +1,15 @@
 name: build-image
 description: "Build image"
 
+inputs:
+  flavor:
+    description: "The flavor of the zarf package"
+    required: true
+
 runs:
   using: composite
   steps:
     - run: |
         set +o history && echo ${REGISTRY1_PASSWORD} | zarf tools registry login registry1.dso.mil --username ${REGISTRY1_USERNAME} --password-stdin || set -o history
-        make build
+        make build-${{ inputs.flavor }}
       shell: bash
