@@ -1,6 +1,6 @@
 kind: ZarfInitConfig
 metadata:
-  name: init
+  name: full
   description: Used to establish a new Zarf cluster
 
 components:

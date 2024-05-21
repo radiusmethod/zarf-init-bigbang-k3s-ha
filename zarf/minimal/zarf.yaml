@@ -1,6 +1,6 @@
 kind: ZarfInitConfig
 metadata:
-  name: init
+  name: minimal
   description: Minimal package with k3s only
 
 components:
