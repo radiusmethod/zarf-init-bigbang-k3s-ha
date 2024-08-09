@@ -8,8 +8,8 @@ on:
     branches: [ 'main' ]
 
 env:
-  # renovate: depName=defenseunicorns/zarf
-  ZARF_VERSION: 0.36.1
+  # renovate: depName=zarf-dev/zarf
+  ZARF_VERSION: 0.37.0
 
 jobs:
   build:
