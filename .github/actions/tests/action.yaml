@@ -10,5 +10,5 @@ runs:
   using: composite
   steps:
     - run: |
-        cd zarf/${{ inputs.flavor }} && zarf dev lint
+        make lint FLAVOR=${{ inputs.flavor }}
       shell: bash
