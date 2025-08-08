@@ -9,11 +9,6 @@ env:
   ZARF_VERSION: 0.59.0
 
 jobs:
-  permissions:
-    contents: read
-    id-token: write
-    packages: write
-
   build:
     runs-on: ubuntu-latest
 
@@ -24,6 +19,7 @@ jobs:
     permissions:
       contents: read
       packages: write
+      id-token: write
 
     steps:
       - name: Checkout
