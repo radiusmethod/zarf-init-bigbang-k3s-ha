@@ -20,8 +20,6 @@ lint:
 	--set AGENT_IMAGE_DOMAIN="registry1.dso.mil/" \
 	--set AGENT_IMAGE="ironbank/opensource/defenseunicorns/zarf/zarf-agent" \
 	--set AGENT_IMAGE_TAG=v$(ZARF_VERSION) \
-	--set INJECTOR_VERSION="2025-03-24" \
-	--set INJECTOR_AMD64_SHASUM="a78d66b9e2b00a22edd9b4e6432a4d934621e3757f09493b12f688c7c9baca93" \
 	--set GITEA_IMAGE=registry1.dso.mil/ironbank/opensource/go-gitea/gitea:v$(GITEA_VERSION)
 
 .PHONY: build-full
@@ -34,8 +32,6 @@ build-full:
 	--set AGENT_IMAGE_DOMAIN="registry1.dso.mil/" \
 	--set AGENT_IMAGE="ironbank/opensource/defenseunicorns/zarf/zarf-agent" \
 	--set AGENT_IMAGE_TAG=v$(ZARF_VERSION) \
-	--set INJECTOR_VERSION="2025-03-24" \
-	--set INJECTOR_AMD64_SHASUM="a78d66b9e2b00a22edd9b4e6432a4d934621e3757f09493b12f688c7c9baca93" \
 	--set GITEA_IMAGE=registry1.dso.mil/ironbank/opensource/go-gitea/gitea:v$(GITEA_VERSION) && \
 	mv $(BUILD_DIR)/zarf-init-amd64-v$(ZARF_VERSION).tar.zst $(BUILD_DIR)/zarf-init-full-amd64-v$(ZARF_VERSION).tar.zst
 
